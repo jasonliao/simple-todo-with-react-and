@@ -1,12 +1,12 @@
 # Simple Todo with React and Reflux
 
-## Question
+## Questions
 
 > `this.getPath()` is not a function
 
 那是因为 `React-Router` 版本更新了，所以要根据最新的语法去写
 
-详情看[这里](https://github.com/rackt/react-router/blob/master/UPGRADE_GUIDE.md)
+详情看 [UPGRADE_GUIDE](https://github.com/rackt/react-router/blob/master/UPGRADE_GUIDE.md)
 
 ### Rendering
 
@@ -51,6 +51,14 @@ var Assignment = React.createClass({
 })
 ```
 
+所以我们在 TodoMain 里的 `switch` 就要改一下
+
+```javascript
+switch (this.props.location.pathname) {
+  // case go here
+}
+```
+
 ### NotFound route
 
 当这个请求为无效请求的时候，从原来的 `<NotFoundRoute />` 改成了 `path` 为 `*` 的 Route
@@ -64,3 +72,16 @@ var Assignment = React.createClass({
 ```
 
 > Cannot read property 'toUpperCase' of undefined
+
+### React-Router 1.0.0-rc1
+
+```bash
+npm install react-router@1.0.0-rc1
+```
+
+> mixins does't work
+
+[Mixins Are Dead. Long Live Composition](https://medium.com/@dan_abramov/mixins-are-dead-long-live-higher-order-components-94a0d2f9e750)
+
+but how to make todo app work
+

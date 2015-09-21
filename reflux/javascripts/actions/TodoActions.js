@@ -1,10 +1,10 @@
-import Reflux from 'reflux';
+import reflux from 'reflux';
 
-export default Reflux.createActions([
-	"toggleItem",
-	"toggleAllItems",
-	"addItem",
-	"removeItem",
-	"clearCompleted",
-	"editItem"
+export default reflux.createActions([
+	"toggleitem",
+	"toggleallitems",
+	"additem",
+	"removeitem",
+	"clearcompleted",
+	"edititem"
 ]);
