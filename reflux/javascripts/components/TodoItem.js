@@ -20,7 +20,7 @@ class TodoItem extends Component {
 		this.setState({
 			isEditing: true,
 			editValue: this.props.label
-		}, function() {
+		}, () => {
 			this.refs.editInput.getDOMNode().focus();
 		});
 	}
@@ -33,7 +33,7 @@ class TodoItem extends Component {
 			this.refs.editInput.getDOMNode().blur();
 		}
 		else if (evt.which === 27) {
-			this.setState({ isEditing: false },function(){
+			this.setState({ isEditing: false }, () => {
 				this.refs.editInput.getDOMNode().blur();
 			});
 		}

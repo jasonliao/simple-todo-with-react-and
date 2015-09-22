@@ -13,19 +13,17 @@ class TodoApp extends Component {
 		super(props);
 		this.state = {
 			list: TodoStores.list
-		}
+		};
+    this.unsubscribe = TodoStores.listen(this.onStatusChange.bind(this));
 	}
 
-  componentDidMount () {
-        this.unsubscribe = TodoStores.listen(this.onStatusChange.bind(this));
-  }
   componentWillUnmount () {
-      this.unsubscribe();
+    this.unsubscribe();
   }
 
-  onStatusChange () {
+  onStatusChange (list) {
   	this.setState({
-  		list: TodoStores.list
+  		list: list
   	})
   }
 

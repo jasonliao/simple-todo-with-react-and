@@ -30,7 +30,7 @@ class TodoFooter extends Component {
 						<Link activeClassName="selected" to="/completed">Completed</Link>
 					</li>
 				</ul>
-				<button id="clear-completed" className={clearButtonClass} onClick={TodoActions.clearCompleted}>{completedLabel}</button>
+				<button id="clear-completed" className={clearButtonClass} onClick={TodoActions.clearcompleted}>{completedLabel}</button>
 			</footer>
 		);
 	}

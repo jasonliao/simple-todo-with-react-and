@@ -19,10 +19,10 @@ class TodoMain extends Component {
 
 		switch (this.props.location.pathname) {
 			case '/completed':
-				filteredList = _.filter(this.props.list,(item) => { return item.isComplete; });
+				filteredList = _.filter(this.props.list, (item) => { return item.isComplete; });
 				break;
 			case '/active':
-				filteredList = _.filter(this.props.list,(item) => { return !item.isComplete; });
+				filteredList = _.filter(this.props.list, (item) => { return !item.isComplete; });
 				break;
 			default:
 				filteredList = this.props.list;
@@ -36,7 +36,7 @@ class TodoMain extends Component {
 				<input id="toggle-all" type="checkbox" onChange={this.toggleAll.bind(this)} />
 				<label htmlFor="toggle-all">Mark all as complete</label>
 				<ul id="todo-list">
-					{ filteredList.map(function(item){
+					{ filteredList.map((item) => {
               return <TodoItem label={item.label} isComplete={item.isComplete} id={item.key} key={item.key}/>;
           })}
 				</ul>

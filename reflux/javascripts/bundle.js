@@ -22179,32 +22179,24 @@
 			this.state = {
 				list: _storesTodoStores2['default'].list
 			};
+			this.unsubscribe = _storesTodoStores2['default'].listen(this.onStatusChange.bind(this));
 		}
 
-		// mixins: [Reflux.listenTo(TodoStores, 'onStatusChange')],
-
 		_createClass(TodoApp, [{
-			key: 'componentDidMount',
-			value: function componentDidMount() {
-				this.unsubscribe = _storesTodoStores2['default'].listen(this.onStatusChange.bind(this));
-				// TodoActions.getAll();
-			}
-		}, {
 			key: 'componentWillUnmount',
 			value: function componentWillUnmount() {
 				this.unsubscribe();
 			}
 		}, {
 			key: 'onStatusChange',
-			value: function onStatusChange() {
+			value: function onStatusChange(list) {
 				this.setState({
-					list: _storesTodoStores2['default'].list
+					list: list
 				});
 			}
 		}, {
 			key: 'render',
 			value: function render() {
-				console.log(this.state.list);
 				return _react2['default'].createElement(
 					'div',
 					null,
@@ -32963,12 +32955,14 @@
 		}, {
 			key: 'handleEditStart',
 			value: function handleEditStart(evt) {
+				var _this = this;
+
 				evt.preventDefault();
 				this.setState({
 					isEditing: true,
 					editValue: this.props.label
 				}, function () {
-					this.refs.editInput.getDOMNode().focus();
+					_this.refs.editInput.getDOMNode().focus();
 				});
 			}
 		}, {
@@ -32979,12 +32973,14 @@
 		}, {
 			key: 'handleValueChange',
 			value: function handleValueChange(evt) {
+				var _this2 = this;
+
 				var text = this.state.editValue;
 				if (evt.which === 13 && text) {
 					this.refs.editInput.getDOMNode().blur();
 				} else if (evt.which === 27) {
 					this.setState({ isEditing: false }, function () {
-						this.refs.editInput.getDOMNode().blur();
+						_this2.refs.editInput.getDOMNode().blur();
 					});
 				}
 			}
@@ -33144,7 +33140,7 @@
 					),
 					_react2['default'].createElement(
 						'button',
-						{ id: "clear-completed", className: clearButtonClass, onClick: _actionsTodoActionsJs2['default'].clearCompleted },
+						{ id: "clear-completed", className: clearButtonClass, onClick: _actionsTodoActionsJs2['default'].clearcompleted },
 						completedLabel
 					)
 				);
