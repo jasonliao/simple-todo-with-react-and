@@ -19545,7 +19545,6 @@
 	};
 
 	function mapStateToProps(state) {
-		console.log(state);
 		return {
 			todos: state.todos
 		};
@@ -20323,7 +20322,7 @@
 	var _todos2 = _interopRequireDefault(_todos);
 
 	var rootReducer = (0, _redux.combineReducers)({
-	  todotest: _todos2['default']
+	  todos: _todos2['default']
 	});
 
 	exports['default'] = rootReducer;
