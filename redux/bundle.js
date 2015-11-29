@@ -19545,6 +19545,7 @@
 	};
 
 	function mapStateToProps(state) {
+		console.log(state);
 		return {
 			todos: state.todos
 		};
@@ -20298,14 +20299,6 @@
 	function configureStore(initialState) {
 	  var store = (0, _redux.createStore)(_reducers2['default'], initialState);
 
-	  // if (module.hot) {
-	  //   // Enable Webpack hot module replacement for reducers
-	  //   module.hot.accept('../reducers', () => {
-	  //     const nextReducer = require('../reducers');
-	  //     store.replaceReducer(nextReducer);
-	  //   });
-	  // }
-
 	  return store;
 	}
 
@@ -20330,7 +20323,7 @@
 	var _todos2 = _interopRequireDefault(_todos);
 
 	var rootReducer = (0, _redux.combineReducers)({
-	  todos: _todos2['default']
+	  todotest: _todos2['default']
 	});
 
 	exports['default'] = rootReducer;
