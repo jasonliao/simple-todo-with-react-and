@@ -2,6 +2,14 @@
 
 这是 Facebook 官方学习 Flux 的 [demo](https://facebook.github.io/flux/docs/todo-list.html)，想用这个例子来总结一下怎么从零开始用 React 和 Flux 构建一个 App 
 
+## How to Use
+
+直接打开 `index.html` 就可以玩这个 TODO 小应用啦。
+
+如果你想自己跑一次，就 `npm install && webpack`（如果有问题可能还需要 `npm install -g webpack`）
+
+**需要注意的是这里的 React 还是 0.13，Babel 还是 5.x，Webpack 还是 1.x。**`webpack.config.js` 的配置是极其简单的，单纯的对 React 的语法和 ES6 的语法进去的编译。
+
 ## Structure
 
 ```javascript
@@ -33,7 +41,7 @@ App
 
 可能你看到的这个结构和官方 demo 的结构会有点不同，那是因为官方的 demo 整个的本身只有 todo 这个功能，但实际上远远不至。所以在 components 下会细分是什么部分的组件，像 TodoComponents
 
-关于 Flux 里的 Action, Dispatcher, Store and Controller View 这些概念如果还不了解的话可以去看看这两篇文章
+关于 Flux 里的 Action, Dispatcher, Store 和 Controller View 这些概念如果还不了解的话可以去看看这两篇文章
 
 - [Flux For Stupid People](http://blog.andrewray.me/flux-for-stupid-people/)
 - [Getting To Know Flux, the React.js Architecture](https://scotch.io/tutorials/getting-to-know-flux-the-react-js-architecture)
@@ -262,3 +270,4 @@ Store 一喊，Controller View 听到之后，更新所有数据，以 `props` �
 6. 重新渲染，新增完毕。
 
 以上是本人浅显的理解，如有错误，欢迎指正 :)
+

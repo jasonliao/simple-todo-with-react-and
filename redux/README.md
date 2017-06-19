@@ -1,5 +1,7 @@
 # Simple TODO with React and Redux
 
+
+
 ## Action
 
 Redux 里的 action 本质上是 JavaScript 的普通对象，这个普通对象肯定会有一个 `type` 属性，常常是一个字符串常量，还可能会有其他的属性就是这个 action 要传入的参数

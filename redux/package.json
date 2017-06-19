@@ -5,7 +5,7 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/L-movingon/simple-todo-with-react-and.git"
+    "url": "git+ssh://git@github.com/jasonliao/simple-todo-with-react-and.git"
   },
   "keywords": [
     "react",
@@ -15,7 +15,7 @@
   "author": "Jason Liao",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/L-movingon/simple-todo-with-react-and/issues"
+    "url": "https://github.com/jasonliao/simple-todo-with-react-and/issues"
   },
   "dependencies": {
     "babel-core": "^5.8.25",
